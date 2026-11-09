@@ -2252,20 +2252,82 @@ input, select, textarea {
 	}
 
 	#intro p {
-    font-weight: 600; /* Aumenta a espessura da fonte de 300 para 500 */
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Adiciona sombra escura para destacar as letras brancas */
+	font-weight: 600;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
 	}
 
-
+	#intro h2 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+	}
 
 
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
+		background: url("images/overlay.png"), url("../images/habilidades.jpeg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+		align-items: center;
+		justify-content: space-between;
+		padding: 3em 2em 6em;
+	}
+
+	#one .skills-grid {
+		transition: transform 1s ease;
+		transform: translateX(0);
+		width: min(560px, 47vw);
+		margin: 0;
+	}
+
+	#one.inactive.right > .skills-grid {
+		transform: translateX(-100%);
+	}
+
+	#one > .content {
+		width: min(40%, 480px);
+		max-width: 40%;
+		margin: 0;
+	}
+
+	@media screen and (min-width: 737px) and (max-width: 1000px) {
+
+		#one {
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+
+		#one .skills-grid,
+		#one > .content {
+			width: 43vw;
+			max-width: 43vw;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#one {
+			flex-direction: column;
+			justify-content: center;
+			gap: 1.5rem;
+			padding: 6em 15px;
+		}
+
+		#one .skills-grid,
+		#one > .content {
+			width: 100%;
+			max-width: 560px;
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#one .skills-grid {
+			grid-template-columns: 1fr;
+		}
+
 	}
 
 /* Two */
@@ -2280,41 +2342,50 @@ input, select, textarea {
 /* Contact */
 
 	#contact {
-		overflow: hidden;
-		padding-bottom: 0;
+		align-items: center;
+		justify-content: center;
 	}
 
-		#contact .box {
-			-moz-transition: -moz-transform 1s ease;
-			-webkit-transition: -webkit-transform 1s ease;
-			-ms-transition: -ms-transform 1s ease;
-			transition: transform 1s ease;
-			-moz-transform: translateY(0);
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-			position: relative;
-		}
+	#contact .conteudo {
+		width: 45em;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+	}
 
-		#contact.inactive .box {
-			-moz-transform: translateY(100%);
-			-webkit-transform: translateY(100%);
-			-ms-transform: translateY(100%);
-			transform: translateY(100%);
-		}
+	#contact .email {
+		color: #2c2020;
+	}
 
-		@media screen and (max-width: 736px) {
 
-			#contact .box {
-				padding: 1.5em 1.5em 2em 1.5em;
+
+		/* skill grid */
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.6rem; /* Espaçamento entre os cartões */
+			text-align: left;
+			padding: 1.5rem;
+			color: #39454b;
+    		opacity: 1 ;
+
+			/*  Fundo e Borda */
+			background: #ffffff;
+			border: 1px solid #ffffff;
+			border-radius: 8px;
+			.skill-card i {
+				color: #39454b;
+				font-size: 2rem;       
+				margin-bottom: 0.8rem; 
+			}
+			.skill-card h3 {
+				font-size: 1.6rem;    
+				margin-bottom: 0.5rem; 
+			}
+			.skill-card li {
+				color: #39454b;
+				opacity: 0.9; /* Deixa o texto bem visível e nítido */
 			}
 
 		}
 
-		@media screen and (max-width: 480px) {
 
-			#contact .box {
-				padding: 1em 1em 2em 1em;
-			}
-
-		}
