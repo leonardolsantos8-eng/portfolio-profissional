@@ -2342,6 +2342,10 @@ input, select, textarea {
 /* Contact */
 
 	#contact {
+		background: url("images/overlay.png"), url("../../images/contato.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 		align-items: center;
 		justify-content: center;
 	}
@@ -2350,10 +2354,23 @@ input, select, textarea {
 		width: 45em;
 		max-width: calc(100% - 2em);
 		margin: 0 auto;
+		color: #ebdfdf;
+	}
+		#contact p {
+	font-weight: 600;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
 	}
 
+	#contact h2 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+	}
+
+
+
 	#contact .email {
-		color: #2c2020;
+		font-weight: 600;
+		text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+		color: #e9d4d4;
 	}
 
 
