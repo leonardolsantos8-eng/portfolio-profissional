@@ -192,6 +192,24 @@
 
     </footer>
 
+    <svg class="neon-route" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="neon-route-colors" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#168cff" />
+                <stop offset="50%" stop-color="#ff244f" />
+                <stop offset="100%" stop-color="#168cff" />
+            </linearGradient>
+                <linearGradient id="neon-route-counter-colors" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ff244f" />
+                    <stop offset="50%" stop-color="#168cff" />
+                    <stop offset="100%" stop-color="#ff244f" />
+                </linearGradient>
+        </defs>
+        <path class="neon-route__glow"></path>
+        <path class="neon-route__line"></path>
+            <path class="neon-route__counter-glow"></path>
+            <path class="neon-route__counter-line"></path>
+    </svg>
 
 
 
@@ -204,6 +222,7 @@
     <script src="js/breakpoints.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/neon-route.js"></script>
     
     
 </body>
